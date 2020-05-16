@@ -47,7 +47,7 @@ Select Category
 Input Producers
     [Arguments]    ${producers}
 
-    : FOR    ${item}    IN    @{producers}
+    FOR    ${item}    IN    @{producers}
     \    Log           ${item}
     \    Input Text    class:producers    ${item}
     \    Press Keys    class:producers    TAB

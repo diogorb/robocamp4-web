@@ -31,7 +31,7 @@ After Test WCLS
 
 Login Session
     Open Session
-    Login With  papito@ninjapixel.com   pwd123
+    Login With  dig@ninjapixel.com   dig123
 
 Product Form Session
     Login Session
