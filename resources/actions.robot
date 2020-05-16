@@ -30,7 +30,8 @@ Quando eu submeto minhas credenciais "${email}" e "${pass}"
 Entao devo ser autenticado
     # Checkpoint
     Wait Until Element Is Visible    ${LOGGED_USER}
-    Element Text Should Be           ${LOGGED_USER}    Papito
+    Wait Until Element Contains      ${LOGGED_USER}    Papito 
+    #Element Text Should Be           ${LOGGED_USER}    Papito
 
 Entao devo ver uma mensagem de erro
     [Arguments]         ${expect_message}
