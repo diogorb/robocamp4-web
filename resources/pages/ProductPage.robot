@@ -1,9 +1,14 @@
 *** Settings ***
 Documentation    Este arquivo implementa funções e elementos da página Produtos
 
+***Variables***
+${BUTTON_PRODUCT_ADD}           class:product-add
+
 *** Keywords ***
 Go To Product Form
-    Click Element    class:product-add
+    Wait Until Element Is Visible    ${BUTTON_PRODUCT_ADD}
+    Click Element                    ${BUTTON_PRODUCT_ADD}
+    Wait Until Page Contains         Novo Produto
 
 Create New Product
     [Arguments]    ${product_json}
