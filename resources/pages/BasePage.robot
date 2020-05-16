@@ -10,7 +10,12 @@ ${ALERT_INFO}       class:alert-info
 *** Keywords ***
 ### Hooks
 Open Session
-    Open Chrome Headless
+    Run Keyword if      "${browser}" == "chrome"
+    ...     Open Chrome
+
+    Run Keyword if      "${browser}" == "headless"
+    ...     Open Chrome Headless
+
     Set Selenium Implicit Wait  5
     Set Window Size     1280        800
 
